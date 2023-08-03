@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:wght@300;400;500;700&display=swap');
+
+
+:root {
+  --Roboto: 'Roboto', sans-serif;
+  --Rubik: 'Rubik', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: var(--Rubik);
+}
+
+
+.slider {
+  margin-top: 90px;
+  background-color: white;
+  height: 200px;
+  width: 100%;
+  z-index: -50;
+}
+
+.slider__patternImg {
+  max-width: min-content;
+}
+
+.slider__posItem {
+  background: rgba(255, 255, 255, 0.682);
+  width: 100%;
+  height: 200px;
+}
+
+.wrapper__pos {
+  cursor: pointer;
+}
+
+.wrapper__posBtn {
+  position: absolute;
+  top: 40%;
+  left: 8px;
+}
+
+.footer__item {
+  width: 100%;
+  height: 156px;
+  background: rgba(251, 248, 236, 0.597);
+
+}
+
+.pox__img {
+  object-fit: cover;
+}
+
+@media(max-width: 1401px) {
+  .slider__img {
+    width: 280px;
+    height: 150px;
+  }
+
+  .wrapper__posBtn {
+    top: 30%;
+    left: 8px;
+  }
+
+}
+
+@media(max-width:972px) {
+  .header__center span>svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header__rightPos span {
+    right: 0;
+  }
+
+  .special__left {
+    padding: 20px !important;
+  }
+
+  .special__right {
+    padding: 20px !important;
+  }
+
+  .special__leftImg {
+    width: fit-content;
+  }
+}
+
+@media(max-width: 640px) {
+  .slider__posItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .big__wrapper,
+  .special,
+  .our__stores,
+  .stati,
+  .pr__top,
+  .poxojie {
+    padding: 30px;
+  }
+
+}
