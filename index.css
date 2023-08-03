@@ -101,8 +101,21 @@ body {
   .special__leftImg {
     width: fit-content;
   }
+  .footer__list{
+    flex-direction: column;
+  }
+}
+.kt__item{
+  background: linear-gradient(180deg, rgba(112, 192, 91, 0.00) 0%, #70C05B 82.81%);
+  height: 70%;
+  width: 100%;
 }
 
+.kt__item2{
+  background: linear-gradient(180deg, rgba(255, 102, 51, 0.00) 0%, #F63 100%);
+  height: 180px;
+  width: 100%;
+}
 @media(max-width: 640px) {
   .slider__posItem {
     display: flex;
@@ -115,7 +128,9 @@ body {
   .our__stores,
   .stati,
   .pr__top,
-  .poxojie {
+  .poxojie,
+  .katalog,
+  .footer__item {
     padding: 30px;
   }
 
