@@ -67,7 +67,16 @@ body {
     width: 280px;
     height: 150px;
   }
-
+  .big__wrapper,
+  .special,
+  .our__stores,
+  .stati,
+  .pr__top,
+  .poxojie,
+  .katalog,
+  .footer__item {
+    padding: 30px;
+  }
   .wrapper__posBtn {
     top: 30%;
     left: 8px;
