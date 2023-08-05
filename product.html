@@ -87,8 +87,8 @@
     <title>Товар || Северяночка</title>
 
     <!-- css link here -->
-    <link rel="stylesheet" href="../../../index.css">
-    <link rel="shortcut icon" href="../../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
   </head>
   <body class="bg-bgBody">
     <!-- Header start here -->
@@ -100,11 +100,11 @@
           <!------- Header left logo block ----------->
 
           <div class="flex items-center h-full ">
-            <a href="../../../index.html" class="hidden logo w-fit md:flex">
-              <img src="../../assets/logo.png" alt="logo">
+            <a href="./index.html" class="hidden logo w-fit md:flex">
+              <img src="./assets/logo.png" alt="logo">
             </a>
-            <a href="../../../index.html" class="flex logo md:hidden">
-              <img src="../../assets/logoMd.png" alt="logo">
+            <a href="./index.html" class="flex logo md:hidden">
+              <img src="./assets/logoMd.png" alt="logo">
             </a>
           </div>
           <!-------- Header center button && input block -------->
@@ -115,7 +115,7 @@
                   <a href="#!" class>
                     <i class="fa-solid fa-bars"></i>
                   </a>
-                  <a href="#!" class="hidden text-white md:flex">
+                  <a href="./categories.html" class="hidden text-white md:flex">
                     Каталог
                   </a>
                 </span>
@@ -145,7 +145,7 @@
             class="flex-wrap items-center hidden h-full gap-4 sm:flex xl:gap-8">
 
             <div class="flex flex-col items-center gap-1">
-              <a href="../../pages/favorites/favorites.html"
+              <a href="./favorites.html"
                 class="header__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
                   viewBox="0 0 25 24" fill="none">
@@ -157,7 +157,7 @@
               <p class="header__text">Избранное</p>
             </div>
             <div class="flex flex-col items-center gap-1">
-              <a href="../../pages/product/product.html" class="header__icon">
+              <a href="./product.html" class="header__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                   viewBox="0 0 24 24" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -178,7 +178,7 @@
             </div>
             <div class="relative flex flex-col items-center gap-1">
               <div class="header__rightPos">
-                <a href="../../pages/cart/cart.html" class="header__icon">
+                <a href="./cart.html" class="header__icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -204,7 +204,7 @@
               <div class="flex items-center w-full gap-2">
                 <div class="w-full h-full">
 
-                  <img src="../../assets/avatar.png" alt="avatar" class>
+                  <img src="./assets/avatar.png" alt="avatar" class>
 
                 </div>
                 <p class="hidden text-xs lg:flex">Алексей</p>
@@ -230,7 +230,7 @@
         <div class="container mx-auto">
           <div class="flex items-center gap-10 pr__topItem">
             <div class>
-              <a href="#!" class="flex items-center gap-1">
+              <a href="./index.html" class="flex items-center gap-1">
                 Главная
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -243,7 +243,7 @@
               </a>
             </div>
             <div class>
-              <a href="#!" class="flex items-center gap-1">
+              <a href="./categories.html" class="flex items-center gap-1">
                 Каталог
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -256,7 +256,7 @@
               </a>
             </div>
             <div class="flex gap-2">
-              <a href="#!" class="flex items-center gap-1">
+              <a href="./product.html" class="flex items-center gap-1">
                 Молоко, сыр, яйцо
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -371,23 +371,23 @@
                 <div class="flex items-center gap-4">
                   <div class="flex flex-col">
                     <div>
-                      <img src="../../assets/Item.png" alt>
+                      <img src="./assets/Item.png" alt>
                     </div>
                     <div>
-                      <img src="../../assets/Item.png" alt>
+                      <img src="./assets/Item.png" alt>
                     </div>
                     <div>
-                      <img src="../../assets/Item.png" alt>
+                      <img src="./assets/Item.png" alt>
                     </div>
                     <div>
-                      <img src="../../assets/Item.png" alt>
+                      <img src="./assets/Item.png" alt>
                     </div>
                     <div>
-                      <img src="../../assets/Item.png" alt>
+                      <img src="./assets/Item.png" alt>
                     </div>
                   </div>
                   <div class="relative">
-                    <img src="../../assets/itemBig.png" alt>
+                    <img src="./assets/itemBig.png" alt>
                     <div class="absolute right-4 top-4">
                       <button class="px-3 py-2 text-white rounded-lg bg-primary">-50%</button>
                     </div>
@@ -484,46 +484,47 @@
         </div>
       </section>
 
-      <section class="py-32 poxojie">
+      <section class="flex py-32 poxojie lg:hidden">
           <div class="container mx-auto">
             <!-- hideen blocl -->
-         <div class="flex lg:hidden">
-          <div class="">
+         <div class="">
+    
             <h4 class="mb-2 text-base font-normal text-gray-500">Похожие</h4>
             <div class="grid grid-cols-4 gap-10">
                 <div class="px-8 py-6 bg-white rounded-lg ">
-                      <img src="../../assets/pox1.png" alt="" class=" pox__img">
+                      <img src="./assets/pox1.png" alt="" class="w-full pox__img">
                       <div class="mt-3">
                         <p class="text-sm md:text-[18px] font-bold">331,50 ₽</p>
                       </div>
                 </div>
                 <div class="px-8 py-6 bg-white rounded-lg ">
-                  <img src="../../assets/pox2.png" alt="" class="pox__img">
+                  <img src="./assets/pox2.png" alt="" class="w-full pox__img">
                   <div class="mt-3">
                     <p class="text-sm md:text-[18px] font-bold">331,50 ₽</p>
                   </div>
             </div>
             <div class="px-8 py-6 bg-white rounded-lg ">
-              <img src="../../assets/pox3.png" alt="" class=" pox__img">
+              <img src="./assets/pox3.png" alt="" class="w-full pox__img">
               <div class="mt-3">
                 <p class="text-sm md:text-[18px] font-bold">331,50 ₽</p>
               </div>
         </div>
         <div class="px-8 py-6 bg-white rounded-lg ">
-          <img src="../../assets/pox3.png" alt="" class=" pox__img">
+          <img src="./assets/pox3.png" alt="" class="w-full pox__img">
           <div class="mt-3">
             <p class="text-sm md:text-[18px] font-bold">331,50 ₽</p>
           </div>
     </div>
           </div>
-          </div>
+        
          </div>
           </div>
       </section>
      
-      <section class="py-32">
+      <section class="py-32 bought__wrapper">
         <div class="container mx-auto">
-          <div class="mt-32 bought__wrapper">
+         <div class="w-full">
+          <div class="bought__wrapper">
             <!-- bought top div 2 items -->
             <div class="w-full mb-10 bought__top">
               <h3 class="us__title">С этим товаров мокупают</h3>
@@ -537,7 +538,7 @@
               <div class="transition-colors wrapper__block group ">
                 <!-- grid top img div -->
                 <div class="flex">
-                  <img src="../../assets/gr6.png" alt="gr1"
+                  <img src="./assets/gr6.png" alt="gr1"
                     class="w-full wrapper__img">
                 </div>
                 <!-- grid bottom div -->
@@ -623,7 +624,7 @@
               <div class="transition-colors wrapper__block group ">
                 <!-- grid top img div -->
                 <div class="flex">
-                  <img src="../../assets/gr3.png" alt="gr1"
+                  <img src="./assets/gr3.png" alt="gr1"
                     class="w-full wrapper__img">
                 </div>
                 <!-- grid bottom div -->
@@ -709,7 +710,7 @@
               <div class="transition-colors wrapper__block group ">
                 <!-- grid top img div -->
                 <div class="flex">
-                  <img src="../../assets/gr4.png" alt="gr1"
+                  <img src="./assets/gr4.png" alt="gr1"
                     class="w-full wrapper__img">
                 </div>
                 <!-- grid bottom div -->
@@ -794,7 +795,7 @@
               <div class="transition-colors wrapper__block group ">
                 <!-- grid top img div -->
                 <div class="flex">
-                  <img src="../../assets/gr2.png" alt="gr1"
+                  <img src="./assets/gr2.png" alt="gr1"
                     class="w-full wrapper__img">
                 </div>
                 <!-- grid bottom div -->
@@ -883,7 +884,7 @@
             <!-- discount top div 2 items -->
             <div class="flex justify-between w-full mb-10 discount__top">
               <h3 class="us__title">Акции</h3>
-              
+           
             </div>
             <!--<<< grid items  -->
             <div
@@ -892,7 +893,7 @@
               <div class="transition-colors wrapper__block group ">
                 <!-- grid top img div -->
                 <div class="flex">
-                  <img src="../..//assets/gr1.png" alt="gr1"
+                  <img src="./assets/gr1.png" alt="gr1"
                     class="w-full wrapper__img">
                 </div>
                 <!-- grid bottom div -->
@@ -977,7 +978,7 @@
                   </div>
                 </div>
                 <!-- Grid position button sales -->
-                <div class="wrapper__posBtn">
+                <div class="absolute top-40 left-3">
                   <div
                     class="flex justify-center text-white items-center w-fit p-2 button rounded-[4px] bg-primary">-50%
                   </div>
@@ -987,7 +988,7 @@
               <div class="transition-colors wrapper__block group">
                 <!-- grid top img div -->
                 <div class="flex">
-                  <img src="../..//assets/gr2.png" alt="gr1"
+                  <img src="./assets/gr2.png" alt="gr1"
                     class="w-full wrapper__img ">
                 </div>
                 <!-- grid bottom div -->
@@ -1073,7 +1074,7 @@
                   </div>
                 </div>
                 <!-- Grid position button sales -->
-                <div class="wrapper__posBtn">
+                <div class="absolute top-40 left-3">
                   <div
                     class="flex justify-center text-white items-center w-fit p-2 button rounded-[4px] bg-primary">-45%
                   </div>
@@ -1083,7 +1084,7 @@
               <div class="transition-colors wrapper__block group ">
                 <!-- grid top img div -->
                 <div class="flex">
-                  <img src="../../assets/gr3.png" alt="gr1"
+                  <img src="./assets/gr3.png" alt="gr1"
                     class="w-full wrapper__img">
                 </div>
                 <!-- grid bottom div -->
@@ -1169,7 +1170,7 @@
                   </div>
                 </div>
                 <!-- Grid position button sales -->
-                <div class="wrapper__posBtn">
+                <div class="absolute top-40 left-3">
                   <div
                     class="flex justify-center text-white items-center w-fit p-2 button rounded-[4px] bg-primary">-50%
                   </div>
@@ -1179,7 +1180,7 @@
               <div class="transition-colors wrapper__block group ">
                 <!-- grid top img div -->
                 <div class="flex">
-                  <img src="../../assets/gr4.png" alt="gr1"
+                  <img src="./assets/gr4.png" alt="gr1"
                     class="w-full wrapper__img">
                 </div>
                 <!-- grid bottom div -->
@@ -1265,14 +1266,16 @@
                   </div>
                 </div>
                 <!-- Grid position button sales -->
-                <div class="wrapper__posBtn">
+                <div class="absolute top-40 left-3">
                   <div
-                    class="flex justify-center text-white items-center w-fit p-2 button rounded-[4px] bg-primary">-25%
+                    class="flex justify-center
+                     text-white items-center w-fit p-2 button rounded-[4px] bg-primary">-25%
                   </div>
                 </div>
               </div>
             </div>
           </div>
+         </div>
         </div>
       </section>
     </main>
@@ -1285,22 +1288,32 @@
           <div class="footer__item">
             <div class="container mx-auto">
               <div class="grid grid-cols-12 gap-10 py-14">
-                <div class="col-span-8">
+                <div class="col-span-12 lg:col-span-8">
                   <div class="flex items-center gap-10">
-                    <a href="../../../index.html" class="logo">
-                      <img src="../../assets/logo.png" alt="logo">
+                    <a href="./index.html" class="logo">
+                      <img src="./assets/logo.png" alt="logo">
                     </a>
-                    <ul class="flex gap-10 footer__list">
-                      <li><a href="#!" class="footer__link">О компании</a></li>
-                      <li><a href="#!" class="footer__link">Контакты</a></li>
-                      <li><a href="#!" class="footer__link">Вакансии</a></li>
-                      <li><a href="#!" class="footer__link">Статьи</a></li>
-                      <li><a href="#!" class="footer__link">Политика обработки
-                          персональных данных</a></li>
+                    <ul class="flex w-full gap-10 footer__list">
+                      <div class="flex items-center gap-2 ">
+                        <li><a href="#!" class="footer__link">О компании</a></li>
+                        <li><a href="./contact.html" class="footer__link">Контакты</a></li>
+                        <li><a href="./work.html" class="footer__link">Вакансии</a></li>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <li>
+                          <a href="./stati.html" class="footer__link">Статьи</a>
+                        </li>
+                        <li>
+                          <a href="#!" class="footer__link">Политика обработки </a>
+                        </li>
+                        <li>
+                          <a href="#!" class="footer__link">Политикаперсональных данных</a>
+                        </li>
+                      </div>
                     </ul>
                   </div>
                 </div>
-                <div class="col-span-4">
+                <div class="col-span-12 lg:col-span-4">
                   <div class="flex gap-10">
                     <div class="flex gap-4">
                       <span>
@@ -1360,7 +1373,8 @@
                       <div class="flex items-center gap-2">
                         <p class>Дизайн</p>
                         <span>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="101"
+                          <svg xmlns="http://www.w3.org/2000/svg"
+                            width="101"
                             height="10" viewBox="0 0 101 10" fill="none">
                             <g clip-path="url(#clip0_23628_20353)">
                               <path fill-rule="evenodd" clip-rule="evenodd"

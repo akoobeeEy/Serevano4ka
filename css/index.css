@@ -72,10 +72,13 @@ body {
   .our__stores,
   .stati,
   .pr__top,
+  .pr__top,
   .poxojie,
   .katalog,
+  .poxojie,
+  .bought__wrapper,
   .footer__item {
-    padding: 30px;
+    padding: 30px 50px !important;
   }
   .wrapper__posBtn {
     top: 30%;
@@ -131,16 +134,4 @@ body {
     align-items: center;
     justify-content: center;
   }
-
-  .big__wrapper,
-  .special,
-  .our__stores,
-  .stati,
-  .pr__top,
-  .poxojie,
-  .katalog,
-  .footer__item {
-    padding: 30px;
-  }
-
 }
