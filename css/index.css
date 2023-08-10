@@ -38,7 +38,7 @@ body {
 .slider__posItem {
   background: rgba(255, 255, 255, 0.682);
   width: 100%;
-  height: 200px;
+  min-height: 200px;
 }
 
 .wrapper__pos {
@@ -51,22 +51,18 @@ body {
   left: 8px;
 }
 
-.footer__item {
-  width: 100%;
-  height: 156px;
-  background: rgba(251, 248, 236, 0.597);
 
-}
 
 .pox__img {
   object-fit: cover;
 }
 
-@media(max-width: 1401px) {
+@media(max-width: 1400px) {
   .slider__img {
     width: 280px;
     height: 150px;
   }
+  .header,
   .big__wrapper,
   .special,
   .our__stores,
@@ -85,6 +81,11 @@ body {
     left: 8px;
   }
 
+}
+@media(max-width: 1200px){
+  .slider__posItem{
+    padding: 20px 0;
+  }
 }
 
 @media(max-width:972px) {
@@ -134,4 +135,8 @@ body {
     align-items: center;
     justify-content: center;
   }
+}
+
+.dropdown__content{
+  display: none;
 }

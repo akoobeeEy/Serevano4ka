@@ -46,7 +46,7 @@ function getDiscountCard(product) {
   // disMidText start
   const disMidText = document.createElement("p");
   disMidText.className = "discount__midText";
-  disMidText.innerHTML = product.description
+  disMidText.innerHTML = `<a href="product.html">${product.description}</a>`
   // disMidText end
   // disRating start
   const disRating = document.createElement("span");
@@ -107,7 +107,6 @@ discountLastProduct.forEach((product)=>{
   
 const neWrapperRow = document.querySelector("#new");
 
-
 function getNewCard(product) {
   const discountCard = document.createElement("div");
   discountCard.className = "discount__card group";
@@ -139,7 +138,7 @@ function getNewCard(product) {
   // disMidText start
   const disMidText = document.createElement("p");
   disMidText.className = "discount__midText";
-  disMidText.innerHTML = product.description
+  disMidText.innerHTML = `<a href="product.html">${product.description}</a>`
   // disMidText end
   // disRating start
   const disRating = document.createElement("span");
@@ -180,96 +179,88 @@ function getNewCard(product) {
 
 const newProductLastItems = newProducts.slice(-4);
 // console.log(newProductLastItems);
-
-newProductLastItems.forEach((el) =>{
-  let newCard = getNewCard(el);
+newProductLastItems.map((product) =>{
+  let newCard = getNewCard(product);
   neWrapperRow.append(newCard);
-})
-
-
-
-
-
+});
 // block wrapper row
-
 const boughtRow = document.querySelector("#bought");
 
+const boughtRating = newProducts.toSorted((a, b) => a.rating - b.rating).slice(-4);
 
-function getBoughtCard(product) {
-  const discountCard = document.createElement("div");
-  discountCard.className = "discount__card group";
-  // discountCardBody start here
-  const discountCardBody = document.createElement("div");
-  discountCardBody.className = 'discount__cardBody';
-  const discountImg = document.createElement("img");
-  discountImg.className = "discount__img";
-  discountImg.src = product.image;
-  discountImg.alt = product.name;
-  discountCardBody.appendChild(discountImg);
-  // discountCardBody end here
-  // discountCardFooter start here
-  const discountCardFooter = document.createElement("div");
-  discountCardFooter.className = "discount__cardFooter";
-  //  dsCardFooterItem start
-  const dsCardFooterItem = document.createElement("div");
-  dsCardFooterItem.className = "dCard__footer__item";
-  const dsCardInfo = document.createElement("div");
-  dsCardInfo.className = "dCard__info";
-  const discountPrText = document.createElement("p");
-  discountPrText.className = "wrapper__priceText";
-  discountPrText.innerHTML = `${product.price}  ₽`;
-  dsCardInfo.appendChild(discountPrText);
-  
-  // append footer item 
-  dsCardFooterItem.appendChild(dsCardInfo);
-  // dsCardFooterItem  end
-  // disMidText start
-  const disMidText = document.createElement("p");
-  disMidText.className = "discount__midText";
-  disMidText.innerHTML = product.description
-  // disMidText end
-  // disRating start
-  const disRating = document.createElement("span");
-  disRating.className = "discount__rating";
-  disRating.innerHTML = product.rating
-  //  disRating enD
-  // discountBtn start
-  const discountFooterButton = document.createElement("div");
-  discountFooterButton.className = "discount__footerButton";
-  const discountBtn = document.createElement("button");
-  discountBtn.className = "discount__button";
-  discountBtn.innerHTML = product.btn;
-  discountFooterButton.append(discountBtn);
-  // discountBtn end
-  // Append discount card footer 
-  discountCardFooter.append(dsCardFooterItem, disMidText, disRating, discountFooterButton);
-  // discountCardFooter end here
-  // wraperPos start
-  const wrapperPos = document.createElement("div");
-  wrapperPos.className = "wrapper__pos";
-  const wrapperPosItem = document.createElement("div");
-  wrapperPosItem.className = "wrapper__posItem";
-  const wrHeartIcon = document.createElement("i");
-  wrHeartIcon.className = "fa-regular fa-heart wrapper__icon";
-  const wrCommentIcon = document.createElement("i");
-  wrCommentIcon.className = "fa-regular fa-comment wrapper__icon"
-  const wrEyeIcon = document.createElement("i");
-  wrEyeIcon.className = "fa-regular fa-eye wrapper__icon";
-  wrapperPosItem.append(wrHeartIcon, wrCommentIcon, wrEyeIcon);
-  wrapperPos.appendChild(wrapperPosItem);
-  // wraperPos  end
-  // append discount row and discount card
-  discountCard.append(discountCardBody, discountCardFooter, wrapperPos);
-  boughtRow.appendChild(discountCard);
-  // Discount card end here
-  return discountCard;
-}
-
-
-const boughtRating = boughtProducts.toSorted((a, b) => a.rating - b.rating).slice(-4);
-
-boughtRating.forEach((product)=>{
-  let card = getBoughtCard(product)
+boughtRating.map((product)=>{
+  let card = getNewCard(product)
   boughtRow.append(card);
 })
 
+// special
+
+const specialRow = document.querySelector(".special__row");
+
+const specialSec = [
+  ...new Set(
+    special.map((spec) => {
+      return spec;
+    })
+  ),
+];
+
+specialRow.innerHTML = specialSec
+.map((spec) => {
+
+    if(spec.id === 1){
+return`<div class="special__left">
+                <div class="flex flex-col gap-3">
+                  <h4 class="flex flex-col text-sm font-bold lg:text-2xl">${spec.title}</h4>
+                  <p class="flex flex-col text-xs font-normal lg:text-base">
+                   ${spec.info}</p>
+                </div>
+                <div class="">
+                  <img src="${spec.img}" alt="specialLeft" class="special__leftImg">
+                </div>
+              </div>
+  `;
+    }else if(spec.id === 2){
+      return`<div class="special__right">
+                <div class="flex flex-col gap-3">
+                  <h4 class="flex flex-col text-sm font-bold lg:text-2xl">${spec.title}</h4>
+                  <p class="flex flex-col text-xs font-normal lg:text-base">
+                   ${spec.info}</p>
+                </div>
+                <div class="">
+                  <img src="${spec.img}" alt="specialLeft" class="special__leftImg">
+                </div>
+              </div>
+  `;
+    }
+})
+.join("");
+
+
+
+
+
+// stati 
+const statiRow = document.querySelector(".stati__row");
+stati.map((stati) => {
+  statiRow.innerHTML += `
+  <div class="duration-200 stati__card group hover:bg-black hover:shadow-green-600">
+              <div class="duration-500 translate-y-28 group-hover:translate-y-0">
+                <img src="${stati.image}"
+                class="w-full duration-500 delay-100 stati__img hover:scale-105">
+              </div>
+              <div class="duration-500 translate-y-[500px] stati__cardItem group-hover:translate-y-0">
+                <p class="text-[10px] md:text-xs text-gray-500 group-hover:text-green-500 duration-0">${stati.data}</p>
+                <h4 class="flex flex-col text-sm md:text-[18px] text-textColor font-bold group-hover:text-green-500">
+                  ${stati.title}
+                </h4>
+                <p class="text-xs font-normal group-hover:text-green-500 md:text-base text-textColor">
+                  ${stati.desc}
+                </p>
+                <div class="">
+                  <button class="stati__button">Подробнее</button>
+                </div>
+              </div>
+            </div>
+  `
+})
