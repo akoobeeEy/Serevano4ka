@@ -1,7 +1,7 @@
 const cartRow = document.querySelector(".cart__row");
 
 
-function getCartCard({id, image, name, description,price, quantity}) {
+function getCartCard({ id, image, name, description, price, quantity }) {
   return `
   <div class="flex flex-col gap-6">
              
@@ -16,7 +16,7 @@ function getCartCard({id, image, name, description,price, quantity}) {
           <p>${description}</p>
         </div>
   
-      <div class="flex items-center gap-10">
+      <div class="flex items-center gap-10 text-white">
      <button  class="flex gap-6 px-4 py-2 bg-secondary">
       <span onClick="decraseQuantitiy(${id})">-</span>
       <span>${quantity}</span>
@@ -38,37 +38,37 @@ function getCartCard({id, image, name, description,price, quantity}) {
 }
 
 
-function getCardProducts(){
+function getCardProducts() {
   cartRow.innerHTML = "";
-  cart.map((pr)=>{
+  cart.map((pr) => {
     cartRow.innerHTML += getCartCard(pr);
   })
 }
 getCardProducts();
 
-function increaseQuantitiy (id){
-  cart = cart.map((pr)=>{
-    if(pr.id === id){
-      pr.quantity ++
+function increaseQuantitiy(id) {
+  cart = cart.map((pr) => {
+    if (pr.id === id) {
+      pr.quantity++
     }
     return pr;
   });
   localStorage.setItem("cart", JSON.stringify(cart));
   getCardProducts();
 }
-function decraseQuantitiy (id){
+function decraseQuantitiy(id) {
   let product = cart.find((pr) => pr.id === id);
-  if(product.quantity === 1){
+  if (product.quantity === 1) {
     cart = cart.filter(pr => pr.id !== id)
-  }else{
-    cart = cart.map((pr)=>{
-      if(pr.id === id){
-        pr.quantity --
+  } else {
+    cart = cart.map((pr) => {
+      if (pr.id === id) {
+        pr.quantity--
       }
       return pr;
     });
   }
-  
+
   localStorage.setItem("cart", JSON.stringify(cart));
   getCardProducts();
 }
